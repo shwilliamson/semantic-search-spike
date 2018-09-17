@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "semanticsearchspike-20180916195408-authRole",
+            "UnauthRoleArn": "arn:aws:iam::530539541094:role/semanticsearchspike-20180916195408-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::530539541094:role/semanticsearchspike-20180916195408-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "semanticsearchspike-20180916195408-deployment",
+            "UnauthRoleName": "semanticsearchspike-20180916195408-unauthRole",
+            "StackName": "semanticsearchspike-20180916195408",
+            "StackId": "arn:aws:cloudformation:us-east-1:530539541094:stack/semanticsearchspike-20180916195408/2f405e60-ba14-11e8-a5ef-50fae98a24fd"
+        }
+    }
+}
