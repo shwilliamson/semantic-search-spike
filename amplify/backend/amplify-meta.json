@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/auth/cognitob354a0e3-cloudformation-template.yml",
 				"logicalId": "authcognitob354a0e3"
 			},
-			"lastPushTimeStamp": "2018-09-17T01:58:54.903Z",
+			"lastPushTimeStamp": "2018-12-27T17:25:06.961Z",
 			"output": {
 				"AppClientSecret": "7s9ph9qtqh9ailhsrq0n95d0l0upk23d208ru4rt9hdqdddohth",
 				"UserPoolId": "us-east-1_2RRQEFGTF",
@@ -40,7 +40,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2018-09-17T01:58:54.910Z",
+			"lastPushTimeStamp": "2018-12-27T17:25:06.962Z",
 			"output": {
 				"S3BucketSecureURL": "https://semanticsearchspike-20180916205559--hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://semanticsearchspike-20180916205559--hostingbucket.s3-website-us-east-1.amazonaws.com",
@@ -48,6 +48,43 @@
 				"HostingBucketName": "semanticsearchspike-20180916205559--hostingbucket"
 			},
 			"lastPushDirHash": "iepwMdjy9L5+hPyD7mcTMzWPNFY="
+		}
+	},
+	"api": {
+		"semanticsearchspike": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "AMAZON_COGNITO_USER_POOLS",
+				"GraphQLAPIIdOutput": "hv2bzxgahfe47hmcownifrdwlu",
+				"GraphQLAPIEndpointOutput": "https://yagish2ud5aoxdqvvaknepm6ve.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-n56olaolo5agzofqdl6fh5qb4u",
+				"AuthCognitoUserPoolIdOutput": "us-east-1_2RRQEFGTF",
+				"AuthCognitoUserPoolNativeClientId": "See UserPool: us-east-1_2RRQEFGTF",
+				"AuthCognitoUserPoolJSClientId": "See UserPool: us-east-1_2RRQEFGTF"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apisemanticsearchspike"
+			},
+			"lastPushTimeStamp": "2018-12-27T17:25:08.302Z",
+			"lastPushDirHash": "flOpGdteixBzkTHgAHM1sqmHJz0="
+		}
+	},
+	"storage": {
+		"semanticsearchS3": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagesemanticsearchS3"
+			},
+			"lastPushTimeStamp": "2018-12-27T17:25:06.969Z",
+			"output": {
+				"BucketName": "semanticsearchdocs",
+				"Region": "us-east-1"
+			},
+			"lastPushDirHash": "lMWrG1nbnWVVEC52o4gHU0R9x1I="
 		}
 	}
 }

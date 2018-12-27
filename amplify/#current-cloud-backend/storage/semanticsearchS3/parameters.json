@@ -1,0 +1,9 @@
+{
+    "bucketName": "semanticsearchdocs",
+    "authPolicyName": "s3_amplify_7badb8d6",
+    "unauthPolicyName": "s3_amplify_7badb8d6",
+    "authRoleName": "semanticsearchspike-20180916195408-authRole",
+    "unauthRoleName": "semanticsearchspike-20180916195408-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

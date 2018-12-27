@@ -10,7 +10,7 @@ import { RouterInitializer } from '@angular/router/src/router_module';
 })
 export class AppComponent {
   title = 'semantic-search-spike';
-  router = null;
+  router: Router;
 
   constructor(router: Router) {
     this.router = router
@@ -20,13 +20,13 @@ export class AppComponent {
   onHubCapsule(capsule) {
       switch (capsule.payload.event) {
         case 'signIn':
-          this.router.navigateByUrl('/search');
+          this.router.navigateByUrl('/upload');
           break;
         case 'signUp':
-        this.router.navigateByUrl('/search');
+          this.router.navigateByUrl('/upload');
           break;
         case 'signOut':
-        this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/');
           break;
         case 'signIn_failure':
           break;

@@ -1,0 +1,26 @@
+type Document @model {
+  id: ID!
+  name: String!
+  description: String!
+  file: S3Object
+}
+
+type S3Object {
+    bucket: String!
+    key: String!
+    region: String!
+}
+
+enum Visibility {
+    public
+    private
+}
+
+input S3ObjectInput {
+  bucket: String!
+  key: String!
+  region: String!
+  mimeType: String
+  visibility: Visibility
+  localUri: String
+}

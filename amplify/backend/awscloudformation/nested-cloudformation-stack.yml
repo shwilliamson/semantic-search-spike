@@ -134,6 +134,40 @@
 				"TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/hosting/template.json",
 				"Parameters": {}
 			}
+		},
+		"apisemanticsearchspike": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"Parameters": {
+					"AppSyncApiName": "semanticsearchspike",
+					"AuthCognitoUserPoolId": {
+						"Fn::GetAtt": [
+							"authcognitob354a0e3",
+							"Outputs.UserPoolId"
+						]
+					},
+					"schemaGraphql": "s3://semanticsearchspike-20180916195408-deployment/amplify-appsync-files/schema.graphql.1545931434981",
+					"ResolverBucket": "semanticsearchspike-20180916195408-deployment",
+					"ResolverRootKey": "amplify-appsync-files",
+					"DeploymentTimestamp": "1545931434981"
+				}
+			}
+		},
+		"storagesemanticsearchS3": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"Parameters": {
+					"bucketName": "semanticsearchdocs",
+					"authPolicyName": "s3_amplify_7badb8d6",
+					"unauthPolicyName": "s3_amplify_7badb8d6",
+					"authRoleName": "semanticsearchspike-20180916195408-authRole",
+					"unauthRoleName": "semanticsearchspike-20180916195408-unauthRole",
+					"authPermissions": "rw",
+					"unauthPermissions": ""
+				}
+			}
 		}
 	},
 	"Outputs": {

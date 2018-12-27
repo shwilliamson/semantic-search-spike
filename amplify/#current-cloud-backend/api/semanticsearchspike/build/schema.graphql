@@ -1,0 +1,135 @@
+type Document {
+  id: ID!
+  name: String!
+  description: String!
+  file: S3Object
+}
+
+type S3Object {
+  bucket: String!
+  key: String!
+  region: String!
+}
+
+enum Visibility {
+  public
+  private
+}
+
+input S3ObjectInput {
+  bucket: String!
+  key: String!
+  region: String!
+  mimeType: String
+  visibility: Visibility
+  localUri: String
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelDocumentConnection {
+  items: [Document]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelDocumentFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  description: ModelStringFilterInput
+  and: [ModelDocumentFilterInput]
+  or: [ModelDocumentFilterInput]
+  not: ModelDocumentFilterInput
+}
+
+type Query {
+  getDocument(id: ID!): Document
+  listDocuments(filter: ModelDocumentFilterInput, limit: Int, nextToken: String): ModelDocumentConnection
+}
+
+input CreateDocumentInput {
+  id: ID
+  name: String!
+  description: String!
+  file: S3ObjectInput
+}
+
+input UpdateDocumentInput {
+  id: ID!
+  name: String
+  description: String
+  file: S3ObjectInput
+}
+
+input DeleteDocumentInput {
+  id: ID
+}
+
+type Mutation {
+  createDocument(input: CreateDocumentInput!): Document
+  updateDocument(input: UpdateDocumentInput!): Document
+  deleteDocument(input: DeleteDocumentInput!): Document
+}
+
+type Subscription {
+  onCreateDocument: Document @aws_subscribe(mutations: ["createDocument"])
+  onUpdateDocument: Document @aws_subscribe(mutations: ["updateDocument"])
+  onDeleteDocument: Document @aws_subscribe(mutations: ["deleteDocument"])
+}

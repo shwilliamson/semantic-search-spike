@@ -8,7 +8,12 @@ const awsmobile =  {
     "aws_user_pools_web_client_id": "3b4s3ki7577p4u0ainje8gsp1r",
     "aws_content_delivery_bucket": "semanticsearchspike-20180916205559--hostingbucket",
     "aws_content_delivery_bucket_region": "us-east-1",
-    "aws_content_delivery_url": "http://semanticsearchspike-20180916205559--hostingbucket.s3-website-us-east-1.amazonaws.com"
+    "aws_content_delivery_url": "http://semanticsearchspike-20180916205559--hostingbucket.s3-website-us-east-1.amazonaws.com",
+    "aws_appsync_graphqlEndpoint": "https://yagish2ud5aoxdqvvaknepm6ve.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
+    "aws_user_files_s3_bucket": "semanticsearchdocs",
+    "aws_user_files_s3_bucket_region": "us-east-1"
 };
 
 

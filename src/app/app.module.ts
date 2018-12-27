@@ -4,16 +4,19 @@ import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular'
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
+import { UploadComponent } from './upload/upload.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
-  { path: 'search', component: SearchComponent }
+  { path: 'search', component: SearchComponent },
+  { path: 'upload', component: UploadComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
