@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { UploadComponent } from './upload/upload.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
   { path: 'search', component: SearchComponent },
   { path: 'upload', component: UploadComponent }
 ];
@@ -21,7 +21,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AmplifyAngularModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [
     AmplifyService

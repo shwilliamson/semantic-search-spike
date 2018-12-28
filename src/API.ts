@@ -12,16 +12,7 @@ export type S3ObjectInput = {
   bucket: string,
   key: string,
   region: string,
-  mimeType?: string | null,
-  visibility?: Visibility | null,
-  localUri?: string | null,
 };
-
-export enum Visibility {
-  public = "public",
-  private = "private",
-}
-
 
 export type UpdateDocumentInput = {
   id: string,

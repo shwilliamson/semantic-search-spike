@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Hub } from 'aws-amplify';
 import { Router } from '@angular/router';
-import { RouterInitializer } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +28,10 @@ export class AppComponent {
           this.router.navigateByUrl('/');
           break;
         case 'signIn_failure':
+          this.router.navigateByUrl('/');
           break;
         case 'configured':
+          this.router.navigateByUrl('/');
           break;
       }
   };

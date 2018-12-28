@@ -5,5 +5,5 @@
     "authRoleName": "semanticsearchspike-20180916195408-authRole",
     "unauthRoleName": "semanticsearchspike-20180916195408-unauthRole",
     "authPermissions": "rw",
-    "unauthPermissions": ""
+    "unauthPermissions": "r"
 }

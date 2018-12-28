@@ -84,7 +84,7 @@
 				"TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/auth/cognitob354a0e3-cloudformation-template.yml",
 				"Parameters": {
 					"identityPoolName": "cognitob354a0e3_identitypool_b354a0e3",
-					"allowUnauthenticatedIdentities": false,
+					"allowUnauthenticatedIdentities": true,
 					"thirdPartyAuth": false,
 					"lambdaLogPolicy": "cognitob354a0e3_lambda_log_policy",
 					"openIdLambdaRoleName": "cognitob354a0e3_openid_lambda_role",
@@ -147,10 +147,10 @@
 							"Outputs.UserPoolId"
 						]
 					},
-					"schemaGraphql": "s3://semanticsearchspike-20180916195408-deployment/amplify-appsync-files/schema.graphql.1545931434981",
+					"schemaGraphql": "s3://semanticsearchspike-20180916195408-deployment/amplify-appsync-files/schema.graphql.1545954179882",
 					"ResolverBucket": "semanticsearchspike-20180916195408-deployment",
 					"ResolverRootKey": "amplify-appsync-files",
-					"DeploymentTimestamp": "1545931434981"
+					"DeploymentTimestamp": "1545954179882"
 				}
 			}
 		},
@@ -165,7 +165,7 @@
 					"authRoleName": "semanticsearchspike-20180916195408-authRole",
 					"unauthRoleName": "semanticsearchspike-20180916195408-unauthRole",
 					"authPermissions": "rw",
-					"unauthPermissions": ""
+					"unauthPermissions": "r"
 				}
 			}
 		}

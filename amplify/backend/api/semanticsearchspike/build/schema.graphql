@@ -11,18 +11,10 @@ type S3Object {
   region: String!
 }
 
-enum Visibility {
-  public
-  private
-}
-
 input S3ObjectInput {
   bucket: String!
   key: String!
   region: String!
-  mimeType: String
-  visibility: Visibility
-  localUri: String
 }
 
 enum ModelSortDirection {

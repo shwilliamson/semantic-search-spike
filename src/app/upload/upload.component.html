@@ -1,3 +1,14 @@
-<p>
-  upload works!
-</p>
+<div class="container">
+    <h1>Upload a document</h1>
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" name="description" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="file">File</label>
+        <input type="file" class="form-control" name="file" accept=".txt" (change)="onFileChange($event)">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

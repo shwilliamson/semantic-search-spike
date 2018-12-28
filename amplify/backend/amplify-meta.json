@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/auth/cognitob354a0e3-cloudformation-template.yml",
 				"logicalId": "authcognitob354a0e3"
 			},
-			"lastPushTimeStamp": "2018-12-27T17:25:06.961Z",
+			"lastPushTimeStamp": "2018-12-28T20:17:19.524Z",
 			"output": {
 				"AppClientSecret": "7s9ph9qtqh9ailhsrq0n95d0l0upk23d208ru4rt9hdqdddohth",
 				"UserPoolId": "us-east-1_2RRQEFGTF",
@@ -29,7 +29,7 @@
 				"IdentityPoolName": "cognitob354a0e3_identitypool_b354a0e3",
 				"UserPoolName": "cognitob354a0e3_userpool_b354a0e3"
 			},
-			"lastPushDirHash": "RV1HLYYkEDBG1AI5NHtBldyF8qU="
+			"lastPushDirHash": "Udu/0hJUFaMZWeU2ZlatpTPKVhc="
 		}
 	},
 	"hosting": {
@@ -40,7 +40,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/hosting/template.json",
 				"logicalId": "hostingS3AndCloudFront"
 			},
-			"lastPushTimeStamp": "2018-12-27T17:25:06.962Z",
+			"lastPushTimeStamp": "2018-12-28T20:17:19.525Z",
 			"output": {
 				"S3BucketSecureURL": "https://semanticsearchspike-20180916205559--hostingbucket.s3.amazonaws.com",
 				"WebsiteURL": "http://semanticsearchspike-20180916205559--hostingbucket.s3-website-us-east-1.amazonaws.com",
@@ -67,8 +67,8 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apisemanticsearchspike"
 			},
-			"lastPushTimeStamp": "2018-12-27T17:25:08.302Z",
-			"lastPushDirHash": "flOpGdteixBzkTHgAHM1sqmHJz0="
+			"lastPushTimeStamp": "2018-12-28T20:17:19.531Z",
+			"lastPushDirHash": "eOEJBY2+UpF8gL2EPHG8OwzOwN8="
 		}
 	},
 	"storage": {
@@ -79,12 +79,12 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/semanticsearchspike-20180916195408-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
 				"logicalId": "storagesemanticsearchS3"
 			},
-			"lastPushTimeStamp": "2018-12-27T17:25:06.969Z",
+			"lastPushTimeStamp": "2018-12-28T20:17:19.533Z",
 			"output": {
 				"BucketName": "semanticsearchdocs",
 				"Region": "us-east-1"
 			},
-			"lastPushDirHash": "lMWrG1nbnWVVEC52o4gHU0R9x1I="
+			"lastPushDirHash": "zBB2rzbiyiifK6WReqGqu/hnMRU="
 		}
 	}
 }
